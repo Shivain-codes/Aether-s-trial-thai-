@@ -1,0 +1,67 @@
+/* Aether's Trial: page styles. No external fonts or assets. */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #121a33 0%, #070a14 70%, #03050b 100%);
+  color: #f4ecd6;
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas#game, #game {
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #0b1020;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  box-shadow: 0 0 60px rgba(90, 140, 255, 0.25), 0 0 0 1px rgba(255, 220, 140, 0.18);
+  outline: none;
+  touch-action: none;
+  cursor: default;
+}
+
+/* Subtitle fallback overlay (used when a canvas subtitle cannot be drawn). Hidden unless .show is set. */
+#narrFallback {
+  position: fixed;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  max-width: min(86vw, 900px);
+  padding: 8px 18px;
+  text-align: center;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: clamp(14px, 2.4vw, 24px);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #fff6dc;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.95), 0 2px 3px rgba(0, 0, 0, 0.9);
+  background: rgba(8, 12, 28, 0.55);
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 20;
+}
+#narrFallback.show { opacity: 1; }
+#narrFallback:empty { display: none; }
+
+noscript, .noscript {
+  color: #f4ecd6;
+  font-family: Georgia, serif;
+}

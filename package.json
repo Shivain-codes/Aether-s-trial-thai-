@@ -1,0 +1,18 @@
+{
+  "name": "aethers-trial-windborne",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Offline third-person fantasy exploration prototype",
+  "scripts": {
+    "build": "node build-3d.cjs",
+    "test": "node --test tests/exploration.test.cjs tests/enemy-behavior.test.cjs tests/intro-player.test.cjs tests/movement.test.cjs",
+    "test:legacy": "node tests/game.test.js && node tests/combat.test.js && node tests/progression.test.js",
+    "build:legacy": "node build.js",
+    "build:qa": "node tests/build-browser-qa.cjs"
+  },
+  "dependencies": {
+    "@pixiv/three-vrm": "3.4.4",
+    "esbuild": "0.25.12",
+    "three": "0.180.0"
+  }
+}

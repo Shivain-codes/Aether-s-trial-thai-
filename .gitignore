@@ -1,0 +1,34 @@
+# Dependencies and local tool caches
+node_modules/
+.DS_Store
+.playwright-mcp/
+__pycache__/
+*.py[cod]
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Rebuildable QA bundle and local historical backups
+/qa.html
+/backups/
+/src3d/narration.aiff
+
+# Previous movie versions and current rendering intermediates
+/shots/intro/
+/shots/intro-v2/
+/shots/intro-short/audio/
+/shots/intro-short/opening-silent.mp4
+/shots/characters/*.json
+/shots/characters/texture-*.png
+/shots/characters/before-*.jpg
+/shots/characters/companion-fixed-*.jpg
+/shots/characters/tests.txt
+
+# Temporary export and office lock files
+~$*
+*.tmp

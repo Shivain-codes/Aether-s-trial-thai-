@@ -1,0 +1,79 @@
+{
+  "file": "index.html",
+  "bytes": 18920097,
+  "sha256": "8fe5eb72da58cf96ea508cbb74e6a43abd399458af1e92f99e51d2e7b4273268",
+  "node_tests": 51,
+  "browser_checks": null,
+  "legacy_tests": 66,
+  "roaming_enemies": 24,
+  "enemy_archetypes": 6,
+  "furnished_camps": 8,
+  "cloud_used": false,
+  "direct_file_browser_tested": false,
+  "full_unassisted_trial_playthroughs": false,
+  "observed_overlook_sample": {
+    "fps": 52,
+    "draw_calls": 444,
+    "triangles": 676207,
+    "benchmark": false
+  },
+  "screenshots": [
+    "shots/windborne-graphics-v3.jpg",
+    "shots/town-v3.jpg",
+    "shots/enemy-camp-v3.jpg"
+  ],
+  "presentation": {
+    "slides": 11,
+    "pptx": "presentation/Aethers_Trial_Windborne.pptx",
+    "pdf": "presentation/Aethers_Trial_Windborne.pdf",
+    "story": "presentation/STORY.md",
+    "validated": true
+  },
+  "opening_film": {
+    "file": "src3d/assets/windborne-intro.mp4",
+    "bytes": 2657715,
+    "sha256": "9255845e6eef69bfe7c7d7a111f01f50d494e08afd11f074a7c7bea24405a7bd",
+    "duration_seconds": 30.0,
+    "width": 1280,
+    "height": 720,
+    "fps": "24/1",
+    "frames": "720",
+    "video": "h264",
+    "audio": "aac",
+    "audio_rate": "48000",
+    "local_render": true,
+    "cloud_used": false,
+    "scenes": [
+      "The broken shrine",
+      "The guardian\u2019s challenge",
+      "The price of the seal",
+      "A new beginning"
+    ],
+    "visual_source": "tools/render-intro-short.py",
+    "audio_source": "tools/render-voice-short.py",
+    "complete_decode_passed": true,
+    "voice": "Kokoro-82M af_heart, local neural synthetic female voice",
+    "human_recording": false
+  },
+  "previous_revision_browser_checks": 46,
+  "browser_status": "Current character refinement not checked live: local browser use disabled in Work settings",
+  "movement": "Acceleration/braking, stride phase, blended poses, turn lean, jump buffer and edge grace",
+  "combat": "Stronger six enemy types; boss HP 700/1200, enrage at half health",
+  "character_review": {
+    "method": "CPU geometry inspection of actual posed THREE meshes; not browser rendering",
+    "views": [
+      "shots/characters/after-front.jpg",
+      "shots/characters/after-back.jpg",
+      "shots/characters/after-threequarter.jpg",
+      "shots/characters/attack-threequarter.jpg"
+    ],
+    "poses": [
+      "idle",
+      "sword attack"
+    ],
+    "finite_vertices": true,
+    "node_tests": 51,
+    "original_models": false,
+    "fan_made_interpretation": true
+  }
+}

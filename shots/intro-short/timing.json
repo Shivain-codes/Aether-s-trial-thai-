@@ -1,0 +1,71 @@
+{
+  "duration": 30.0,
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "captions": [
+    {
+      "start": 0.8,
+      "end": 4.948,
+      "text": "When the wind shrine shattered, its power rushed toward the village."
+    },
+    {
+      "start": 6.8,
+      "end": 10.948,
+      "text": "Aether fought through the guardians and sealed the storm to save the village."
+    },
+    {
+      "start": 16.1,
+      "end": 19.587,
+      "text": "But the broken shrine took his memories to hold the seal."
+    },
+    {
+      "start": 23.5,
+      "end": 26.709,
+      "text": "He woke with no past... and a new journey ahead."
+    }
+  ],
+  "voice": "Kokoro-82M af_heart, local neural synthetic female voice",
+  "voice_model_url": "https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX",
+  "voice_model_sha256": "ba4527a874b42b21e35f468c10d326fdff3c7fc8cac1f85e9eb6c0dfc35c334a",
+  "voice_model_license": "Apache-2.0",
+  "runtime": "kokoro-onnx 0.6.1 / ONNX Runtime CPU",
+  "runtime_license": "MIT",
+  "music": "Original locally synthesized score with speech ducking",
+  "clips": [
+    {
+      "index": 1,
+      "start": 0.8,
+      "speech_seconds": 3.968,
+      "speed": 0.84,
+      "peak": 0.66415
+    },
+    {
+      "index": 2,
+      "start": 6.8,
+      "speech_seconds": 3.968,
+      "speed": 0.92,
+      "peak": 0.74261
+    },
+    {
+      "index": 3,
+      "start": 16.1,
+      "speech_seconds": 3.307,
+      "speed": 0.86,
+      "peak": 0.73392
+    },
+    {
+      "index": 4,
+      "start": 23.5,
+      "speech_seconds": 3.029,
+      "speed": 0.84,
+      "peak": 0.65926
+    }
+  ],
+  "narration_mix_seconds": 30.0,
+  "rendered_locally": true,
+  "cloud_used": false,
+  "human_recording": false,
+  "peak": 0.740627,
+  "generation_seconds": 7.16
+}

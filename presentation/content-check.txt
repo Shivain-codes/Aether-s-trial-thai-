@@ -1,0 +1,193 @@
+ppt/slides/slide1.xml
+AETHER’S TRIAL  /  WINDBORNE
+01
+AN EXPLORABLE FANTASY PROTOTYPE
+Aether’s Trial
+WINDBORNE
+Follow the wind. Recover the valley. Find your purpose.
+
+ppt/slides/slide2.xml
+AETHER’S TRIAL  /  WINDBORNE
+02
+A valley worth
+getting lost in.
+A bright world of winding paths, small human routines and danger just beyond the next hill.
+ACTUAL PLAYABLE BUILD
+6
+places to discover
+9
+working residents
+2
+combat trials
+
+ppt/slides/slide3.xml
+AETHER’S TRIAL  /  WINDBORNE
+03
+THE STORY BEHIND THE JOURNEY
+The wind remembers.
+Aether does not.
+A wind shrine shatters. Aether fights its guardian and seals the storm to save the village. The seal consumes his memories; he wakes on a cliff with a floating companion.
+The question beneath the adventure
+Can you protect a home
+before you remember your own?
+
+ppt/slides/slide4.xml
+AETHER’S TRIAL  /  WINDBORNE
+04
+Three voices. One journey.
+THE TRAVELLER
+Aether
+An outsider with missing memories. His growing purpose is to protect the people he meets.
+THE COMPANION
+Paimon
+A floating guide who turns an unfamiliar world into a journey shared with someone.
+KEEPER OF THE WINDS
+Lyra
+A local keeper who asks for three wind sigils and points Aether toward the old guardians.
+
+ppt/slides/slide5.xml
+AETHER’S TRIAL  /  WINDBORNE
+05
+Restore the winds.
+Find a reason to stay.
+A compact story arc built around the game’s existing quest and two trials.
+I
+EXPLORATION & TRUST
+Listen to the valley
+Meet Lyra in Mondstadt. Gather three wind sigils and return to her.
+II
+MONDSTADT FIELDS
+Wake the first gate
+Defeat the Fields guardian. The northern trial becomes accessible.
+III
+STORMTERROR RUINS
+Answer the storm
+Defeat the Storm Drake. Restore the winds and choose to protect this new home.
+
+ppt/slides/slide6.xml
+AETHER’S TRIAL  /  WINDBORNE
+06
+One valley.
+Six invitations.
+The world connects quiet villages, open water and ancient places through explorable terrain.
+Suggested story route
+Overlook → Mondstadt
+Fields trial → Northern ruins
+SCHEMATIC · NOT TO SCALE
+Windrise Overlook
+Mondstadt
+Cider Lake
+Windrise
+Dawn Winery
+Stormterror Ruins
+N
+
+ppt/slides/slide7.xml
+AETHER’S TRIAL  /  WINDBORNE
+07
+Curiosity becomes progress.
+A repeatable loop for a small, open fantasy world.
+01
+Explore
+Smooth running, turning, jumping, dashing and gliding.
+02
+Discover
+Find six wind sigils, eight chests and six landmarks.
+03
+Prepare
+Rest at waypoints. Gain levels, potions and energy.
+04
+Challenge
+Clear enemy camps and overcome the two trials.
+YOUR JOURNEY PERSISTS
+Local saves retain exploration, rewards and defeated camps on this device.
+
+ppt/slides/slide8.xml
+AETHER’S TRIAL  /  WINDBORNE
+08
+Read the threat. Choose your answer.
+ACTUAL ENEMY-CAMP BUILD
+Stronger foes · Bosses enrage at half health
+Elemental slime
+Dodge the landing
+Masked raider
+Punish the recovery
+Shield warden
+Flank or use Pyro
+Ember archer
+Sidestep the aim line
+Abyss weaver
+Leave the spell circle
+Ruin sentinel
+Bait the heavy slam
+PYRO + HYDRO
+Vaporize · ×1.5 damage
+
+ppt/slides/slide9.xml
+AETHER’S TRIAL  /  WINDBORNE
+09
+One sacrifice. A missing past.
+A 30-second opening film with our traveller, a guardian duel and the cost of saving a village.
+00–06 SEC
+The shrine breaks
+A storm threatens the village.
+06–16 SEC
+Aether fights
+Parry, dash and a sword clash.
+16–23 SEC
+The seal takes its price
+The valley is saved; his memories fade.
+23–30 SEC
+A new beginning
+He awakens beside his companion.
+
+ppt/slides/slide10.xml
+AETHER’S TRIAL  /  WINDBORNE
+10
+How we built the valley.
+Browser graphics and game systems, with a local build and movie pipeline.
+01
+Browser foundation
+HTML5 · CSS · JavaScript
+Interface, input, menus and the game loop.
+02
+Rendering & characters
+Three.js · WebGL 2 · three-vrm
+3D world, lighting, water and a licensed VRM base.
+03
+Game systems
+Custom JavaScript
+Movement, camera, combat, enemy AI and NPC routines.
+04
+Progress on this device
+Browser localStorage
+Quests, discoveries, rewards and defeated camps.
+05
+Build & verification
+Node.js · npm · esbuild
+Bundle the local game; run automated logic tests.
+06
+Opening film & voice
+Python · Pillow · NumPy · FFmpeg
+Animated frames + local Kokoro narration → H.264/AAC.
+Local browser GPU for play · CPU-rendered opening and voice · no cloud GPU required
+
+ppt/slides/slide11.xml
+AETHER’S TRIAL  /  WINDBORNE
+11
+The winds are waiting.
+A playable beginning, with a clear next chapter.
+PLAYABLE NOW
+Explore. Fight. Return.
+Six landmarks · nine residents
+24 roaming enemies · two trials
+30-second film · saves · story journal
+STORY & ART — NEXT SCOPE
+Deepen the journey.
+More authored dialogue and memory scenes
+Richer character animation and environment art
+More varied quests, locations and encounters
+DEMO ROUTE
+Overlook → Lyra → 3 sigils → Fields trial → Northern ruins
+Unofficial fan-made prototype; original backstory. Genshin references © HoYoverse. VRM base © 2022 pixiv Inc.
+Three.js / three-vrm: MIT. Narration: locally synthesized Kokoro-82M af_heart (female).

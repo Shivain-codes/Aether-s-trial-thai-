@@ -1,0 +1,43 @@
+{
+  "duration": 30,
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The broken shrine"
+    },
+    {
+      "start": 6,
+      "title": "The guardian’s challenge"
+    },
+    {
+      "start": 16,
+      "title": "The price of the seal"
+    },
+    {
+      "start": 23,
+      "title": "A new beginning"
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.8,
+      "end": 4.948,
+      "text": "When the wind shrine shattered, its power rushed toward the village."
+    },
+    {
+      "start": 6.8,
+      "end": 10.948,
+      "text": "Aether fought through the guardians and sealed the storm to save the village."
+    },
+    {
+      "start": 16.1,
+      "end": 19.587,
+      "text": "But the broken shrine took his memories to hold the seal."
+    },
+    {
+      "start": 23.5,
+      "end": 26.709,
+      "text": "He woke with no past... and a new journey ahead."
+    }
+  ]
+}

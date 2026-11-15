@@ -1,0 +1,24 @@
+{
+  "file": "src3d/assets/windborne-intro.mp4",
+  "bytes": 2657715,
+  "sha256": "9255845e6eef69bfe7c7d7a111f01f50d494e08afd11f074a7c7bea24405a7bd",
+  "duration_seconds": 30.0,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": "720",
+  "video": "h264",
+  "audio": "aac",
+  "audio_rate": "48000",
+  "local_render": true,
+  "cloud_used": false,
+  "scenes": [
+    "The broken shrine",
+    "The guardian\u2019s challenge",
+    "The price of the seal",
+    "A new beginning"
+  ],
+  "visual_source": "tools/render-intro-short.py",
+  "audio_source": "tools/render-voice-short.py",
+  "complete_decode_passed": true
+}

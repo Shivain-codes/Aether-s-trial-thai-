@@ -1,0 +1,26 @@
+import * as T from 'three';
+import {box,orb,cyl,mesh,mat} from './art.js';
+import {heightAt} from './core.js';
+function person(color,hat=false){const root=new T.Group(),body=new T.Group();root.add(body);cyl(body,color,0,1.1,0,.22,.28,.7,10);cyl(body,0xd7bb80,0,.82,0,.28,.28,.06,10);const head=orb(body,0xf1c9a2,0,1.73,0,.21,.26,.20);orb(body,0x594739,0,1.84,-.05,.22,.18,.20);for(const s of [-1,1])orb(body,0x31413e,s*.075,1.75,.183,.025,.038,.014);if(hat){cyl(body,0xc5a86b,0,1.98,0,.37,.38,.05,20);cyl(body,0xb0955f,0,2.08,0,.19,.23,.2,12);}
+ const arms=[],legs=[];for(const s of [-1,1]){const a=new T.Group();a.position.set(s*.27,1.4,0);body.add(a);cyl(a,color,0,-.17,0,.09,.075,.34,8);cyl(a,0xefc6a0,0,-.4,0,.065,.06,.18,8);orb(a,0xf1c9a2,0,-.52,0,.066,.08,.065);arms.push(a);const l=new T.Group();l.position.set(s*.12,.8,0);body.add(l);cyl(l,0x45545a,0,-.35,0,.11,.085,.7,8);orb(l,0x39454b,0,-.76,.05,.095,.065,.15);legs.push(l);}return{root,body,arms,legs};}
+export function makeResidents(scene,solids=[]){const list=[];
+ function add(name,job,x,z,color,route,dialogue,hat=false){const rig=person(color,hat),n={name,job,x,z,rig,route,dialogue,phase:list.length*.9};scene.add(rig.root);rig.root.position.set(x,heightAt(x,z),z);list.push(n);return n;}
+ const smith=add('Oren','Blacksmith',-41,14,0x826853,null,'A good blade needs patience. Dash out of a red warning zone before the blow lands.');box(smith.rig.root,0x57656b,.7,.65,.7,.8,.3,.5);const hammer=new T.Group();smith.rig.arms[1].add(hammer);cyl(hammer,0x775640,0,-.6,0,.025,.025,.35,6);box(hammer,0x7b8b90,0,-.77,0,.28,.12,.12);
+ const seller=add('Mira','Market keeper',-58,25,0x6b829d,null,'The market is open. The old tree at Windrise is beautiful in the afternoon. Follow the western trail.');
+ const market=new T.Group();market.position.set(-58,heightAt(-58,27),27);scene.add(market);solids.push({x:-58,z:27,r:1.65});
+ box(market,0x725c3f,0,.68,0,3.2,1.3,1.35);box(market,0xb2986c,0,1.38,0,3.45,.13,1.55);for(let j=0;j<11;j++)box(market,j%2?0x9a7d51:0xa58a5f,-1.45+j*.29,.72,.70,.27,1.18,.06);for(const y of [.22,1.12])box(market,0x5e513c,0,y,.76,3.2,.07,.08);
+ for(const x of [-1.65,1.65])for(const z of [-.67,.70])cyl(market,0x765e40,x,1.55,z,.055,.08,3.1,8);
+ for(let j=0;j<12;j++){const color=j%2?0x5b8c7d:0xede2bb,x=-1.84+j*.32;const awning=box(market,color,x,2.94,0,.32,.07,1.95);awning.rotation.x=.10;const valance=mesh(new T.PlaneGeometry(.32,.29),mat(color,{side:T.DoubleSide}),market,x,2.71,.98);orb(market,color,x,2.57,.98,.158,.095,.02);}
+ for(let k=0;k<3;k++){box(market,0x795b36,-1+k,1.50,0,.85,.13,1.02);for(let j=0;j<12;j++){const row=Math.floor(j/4);orb(market,[0xc69840,0xa85742,0x9ab451][k],-1.28+k+(j%4)*.19,1.65+(row===2?.08:0),-.30+row*.25,.115,.105,.105);}}
+ const sign=box(market,0x47695e,0,2.28,1.01,.95,.33,.045);for(const x of [-.30,.30])cyl(market,0xc4ad6e,x,2.57,1.01,.009,.009,.27,5);mesh(new T.OctahedronGeometry(.12),0xf2d89b,market,0,2.28,1.05).scale.z=.12;
+ const gardener=add('Tessa','Vineyard gardener',-119,58,0x7b8d60,[[-119,58],[-119,74]],'The grapes need sun, water, and a little wind. This is our small tribute to Dawn Winery.',true);const can=cyl(gardener.rig.arms[1],0x8fa4a2,0,-.6,0,.12,.13,.24,10);can.rotation.x=.5;
+ const fisher=add('Nell','Fisher',81,52,0x587e8a,null,'Quiet footsteps, traveler. The fish in Cider Lake hear everything.',true);const rod=cyl(fisher.rig.arms[1],0x8a7150,0,-.45,1.05,.015,.027,2.4,6);rod.rotation.x=1.1;
+ add('Edda','Delivery runner',-48,19,0x9e6a5b,[[-48,19],[-39,18],[-42,4],[-62,8],[-62,18]],'Fresh bread for the windmill workers. The city never quite stands still.');
+ add('Rowan','City guard',-47,-5,0x698c97,[[-47,-5],[-34,-5],[-34,3]],'The field trial is northeast of the city. Watch for roaming slimes along the road.');
+ add('Iris','Traveler',-101,-52,0x977d9d,[[-101,-52],[-91,-53],[-95,-44]],'The great tree makes even a short journey feel like an adventure.');
+ add('Alden','Winery porter',-129,64,0x8b785c,[[-129,64],[-135,72],[-135,60]],'The next delivery is headed for Mondstadt. The old ruins can wait until your supplies are ready.',true);
+ add('Lyra','Keeper of the winds',-53,17,0x638d89,null,'The wind remembers every traveler.');
+ return{list,update(t,dt){for(const n of list){let walking=false;if(n.route){const speed=n.job==='Delivery runner'?1.45:.8,cycle=t*speed+n.phase*3,total=n.route.length*10,k=Math.floor(cycle/10)%n.route.length,u=(cycle%10)/10,a=n.route[k],b=n.route[(k+1)%n.route.length];n.x=a[0]+(b[0]-a[0])*u;n.z=a[1]+(b[1]-a[1])*u;n.rig.root.rotation.y=Math.atan2(b[0]-a[0],b[1]-a[1]);walking=true;}
+ if(n.animateDetailed)n.animateDetailed(t,walking);const ph=t*6+n.phase;n.rig.root.position.set(n.x,heightAt(n.x,n.z),n.z);n.rig.legs.forEach((l,i)=>l.rotation.x=walking?Math.sin(ph+i*Math.PI)*.4:0);n.rig.arms.forEach((a,i)=>a.rotation.x=walking?-Math.sin(ph+i*Math.PI)*.3:-.15);n.rig.body.position.y=walking?Math.abs(Math.sin(ph))*.025:0;
+ if(n.job==='Blacksmith')n.rig.arms[1].rotation.x=-.6-Math.max(0,Math.sin(t*3))*.8;if(n.job==='Vineyard gardener'){n.rig.arms[1].rotation.x=-.65;n.rig.body.rotation.x=.12;}if(n.job==='Fisher'){n.rig.arms[1].rotation.x=-.6+Math.sin(t*.7)*.06;}if(n.job==='Market keeper')n.rig.arms[0].rotation.z=.12+Math.sin(t)*.1;}}};
+}

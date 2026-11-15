@@ -1,0 +1,4 @@
+# Bundles include generated third-party shader strings; keep their bytes intact.
+/index.html linguist-generated=true -whitespace
+/legacy-2d.html linguist-generated=true -whitespace
+/presentation/rendered/* linguist-generated=true

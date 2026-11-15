@@ -1,0 +1,14 @@
+{
+  "slides": 11,
+  "worldScreenshot": "shots/windborne-graphics-v3.jpg",
+  "campScreenshot": "shots/enemy-camp-v3.jpg",
+  "townScreenshot": "shots/town-v3.jpg",
+  "introFrames": {
+    "fight": "shots/intro-short/fight.jpg",
+    "memory": "shots/intro-short/memory.jpg",
+    "poster": "shots/intro-short/poster.jpg"
+  },
+  "introSeconds": 30,
+  "editable": "Native PowerPoint text, shapes, diagrams, map and tech stack; screenshots remain images",
+  "generatedAt": "2026-11-15T11:24:06.436Z"
+}
